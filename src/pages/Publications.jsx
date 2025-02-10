@@ -1,12 +1,10 @@
-import React from "react";
-
 const Publications = () => {
   const publications = [
     {
       title:
         "Monitoring and predicting the influences of land use/land cover change on cropland characteristics and drought severity using remote sensing techniques",
       authors:
-        "BE Taiwo, AA Kafy, AA Samuel, ZA Rahaman, OE Ayowole, M Shahrier, ...",
+        "BM Duti , BE Taiwo, AA Kafy, AA Samuel, ZA Rahaman, OE Ayowole, M Shahrier, ...",
       journal: "Environmental and Sustainability Indicators",
       volume: 18,
       articleId: "100248",
@@ -150,41 +148,53 @@ const Publications = () => {
   ];
 
   return (
-    <div>
-      <nav className="bg-blue-600 text-white p-4"></nav>
-
-      {/* Big Publications Title */}
-      <div className="bg-gray-200 py-6 mt-6">
-        <h1 className="text-4xl font-extrabold text-center text-gray-800">
+    <section className="bg-gray-100 py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8">
           Publications
-        </h1>
-      </div>
-
-      <div className="flex flex-wrap justify-center gap-6 p-6 bg-gray-100">
-        {publications.map((pub, index) => (
-          <div
-            key={index}
-            className="max-w-sm p-4 bg-white rounded-lg shadow-md transform transition-transform hover:scale-105 hover:shadow-lg"
+        </h2>
+        <div className="flex justify-center mb-8">
+          <a
+            href="https://scholar.google.com/citations?user=jkWVzUQAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            <p className="text-sm text-gray-600 mb-2">Authors: {pub.authors}</p>
-            <p className="text-sm text-gray-600 mb-2">
-              Journal: {pub.journal}
-              {pub.volume && `, Volume: ${pub.volume}`}
-              {pub.issue && `, Issue: ${pub.issue}`}
-              {pub.pages && `, Pages: ${pub.pages}`}
-              {pub.articleId && `, Article ID: ${pub.articleId}`}
-            </p>
-            <p className="text-sm text-gray-600 mb-2">
-              Citations: {pub.citations}
-            </p>
-            <p className="text-sm text-gray-600 mb-4">Year: {pub.year}</p>
-            <h3 className="text-lg font-semibold mt-4 text-gray-800">
-              {pub.title}
-            </h3>
-          </div>
-        ))}
+            View Google Scholar Profile
+          </a>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {publications.map((pub, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="px-6 py-4">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {pub.title}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  <span className="font-bold">Authors:</span> {pub.authors}
+                </p>
+                <p className="text-gray-600 text-sm">
+                  <span className="font-bold">Journal:</span> {pub.journal}
+                  {pub.volume && <>, Volume: {pub.volume}</>}
+                  {pub.issue && <>, Issue: {pub.issue}</>}
+                  {pub.pages && <>, Pages: {pub.pages}</>}
+                  {pub.articleId && <>, Article ID: {pub.articleId}</>}
+                </p>
+                <p className="text-gray-600 text-sm">
+                  <span className="font-bold">Citations:</span> {pub.citations}
+                </p>
+                <p className="text-gray-600 text-sm">
+                  <span className="font-bold">Year:</span> {pub.year}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
