@@ -137,11 +137,7 @@ const Projects = () => {
 
   const projectsData = [
     // An array of objects, where each object represents a project. Each project has a 'title' and a 'description'.
-    {
-      title: "Urban Water Supply Design",
-      description:
-        "Designed a sustainable water distribution system for an urban area, focusing on reducing waste and increasing efficiency.",
-    },
+
     {
       title: "Flood Risk Assessment",
       description:
@@ -221,11 +217,6 @@ const Projects = () => {
       title: "WATSAN Assessment for Vulnerable Hotspots in Bangladesh",
       description:
         "Contributed to a water supply and sanitation assessment for vulnerable areas in Bangladesh at the Center for Environmental and Geographic Information Services (CEGIS).",
-    },
-    {
-      title: "Dhaka City Master Plan Update",
-      description:
-        "Contributed to the update of the Dhaka City Master Plan at the Institute of Engineers Bangladesh.",
     },
   ];
 

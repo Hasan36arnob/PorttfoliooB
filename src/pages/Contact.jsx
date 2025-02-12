@@ -3,28 +3,28 @@ import React from "react";
 const Contact = () => {
   return (
     <section className="bg-white text-dark py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6 align-middle"></h2>
+      {/* Centered container */}
+      <div className="container mx-auto px-4 flex flex-col items-center justify-center min-h-screen">
+        {/* Title */}
+        <h2 className="text-3xl font-bold mb-6 text-center"></h2>
 
         {/* Contact Information */}
-        <div className="max-w-lg mx-auto bg-white-800 p-8 rounded-lg shadow-lg mb-8">
+        <div className="max-w-lg bg-gray-100 p-8 rounded-lg shadow-lg text-center">
           <h3 className="text-2xl font-bold mb-4">Email</h3>
           <ul className="space-y-3 mb-6">
             <li>
               <a
-                href="bushra.monowar@gmail.com"
+                href="mailto:bushra.monowar@gmail.com"
                 className="hover:text-orange-500"
               >
                 bushra.monowar@gmail.com
-              </a>{" "}
+              </a>
             </li>
           </ul>
-
           <h3 className="text-2xl font-bold mb-4">Phone</h3>
           <ul className="space-y-3 mb-6">
             <li>+8801716415528 (Mobile)</li>
           </ul>
-
           <div className="flex justify-center space-x-4 mt-6">
             <a
               href="https://www.linkedin.com/in/bushra-monowar-d-88b8091b/"
@@ -44,8 +44,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
-        {/* Contact Form */}
       </div>
     </section>
   );
